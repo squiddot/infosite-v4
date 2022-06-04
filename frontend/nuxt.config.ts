@@ -2,9 +2,15 @@ import { defineNuxtConfig } from 'nuxt'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-    buildModules: ['@nuxtjs/strapi'],
+    buildModules: [
+        '@nuxtjs/strapi',
+        '@nuxtjs/google-fonts',
+    ],
     strapi: {
     //    options
-    }
+    },
+    modules: [
+        '@nuxtjs/color-mode'
+    ]
 
 })
