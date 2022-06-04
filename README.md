@@ -1,11 +1,11 @@
 # info.leaderboards.gg - Info Site Subdomain
-This is the repo for the current info-site sitting at https://info.leaderboards.gg
+In progress new infosite with content management system.
 
 ### References
 
 Our Other Repos:
 - leaderboards.gg Main Site - https://github.com/leaderboardsgg/leaderboard-site
-- leaderboards.gg Backend - https://github.com/leaderboardsgg/leaderboard-backend-poc
+- leaderboards.gg Backend - https://github.com/leaderboardsgg/leaderboard-backend
 
 Other Links:
 - Discord - https://discord.leaderboards.gg
@@ -14,98 +14,159 @@ Other Links:
 - [Introduction](#introduction)
 - [Technologies](#technologies)
 - [Build Setup](#build-setup)
-- [Status](#status)
-- [Repo Structure](#repo-structure)
-- [Vue Readme](#vue-readme)
+
+[//]: # (- [Status]&#40;#status&#41;)
+
+[//]: # (- [Repo Structure]&#40;#repo-structure&#41;)
+- [Strapi(Backend) Readme](#strapi-readme)
+- [Nuxt Readme](#nuxt-readme)
 
 ## Introduction
-Leaderboards.gg (lbgg) was sparked by the purchase of speedrun.com by the esports data analytics company Elo Entertainment. In lbgg we see an opportunity to help the community continue to grow and thrive with tools (a website, an API) built to scale, on newer technologies, curated to what its users want, without it being monetized. Because its open source, the community owns it and can use it as they wish.
+Leaderboards.gg (lbgg) was sparked by the purchase of speedrun.com by the esports data analytics company Elo Entertainment.
 
-Another huge opportunity we see is being able to handle score based runs on our leaderboards, in addition to time based.
+In lbgg we see an opportunity to help the "Online and competitive retro gaming" (basically speedruns and scoreruns) community continue to grow and thrive with tools (a centralized website and database, an API, a smaller site for clear documentation) built to scale, on modern technologies, curated to what its users want, without it being monetized. Because its open source, the community owns it and can use it as they wish.
 
 Because it is currently under construction (and in two separate repos), we are using this repo to represent the project as a whole.
 
 ## Technologies
 - Frontend
+  - Nuxt3
+  - Vue3
+  - Tailwind
 - Backend
+  - C#
+  - ASP.NET Core
+  - .NET 6.0
 - Info site
-  - Nuxt.js
-  - Vue 2
-  - SCSS
+  - Nuxt3
+  - Vue3
+  - Tailwind
+  - GSAP
 
-## Build Setup
+## Frontend Setup
 
 ```bash
 # install dependencies
 $ npm install
 
 # serve with hot reload at localhost:3000
-$ npm run dev
+$ npm run develop
 
 # build for production and launch server
 $ npm run build
 $ npm run start
 
-# generate static project
-$ npm run generate
+# I don't know what this does yet
+$ npm run strapi
 ```
 
-## Status
+[//]: # (## Status)
 
-## Repo Structure 
-(subject to change)
+[//]: # (Very under construction. Please excuse our mess.)
 
-Component styles with variables are in assets/scss/layouts (and then separated by layout)
-Global styles are in assets/scss/globals
-SVGs are in assets/sprite/svg
+[//]: # (## Repo Structure )
 
-# Vue Readme
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+# Strapi Readme
 
-## Special Directories
+## 🚀 Getting started with Strapi
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
 
-### `assets`
+### `develop`
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-develop)
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+```
+npm run develop
+# or
+yarn develop
+```
 
-### `components`
+### `start`
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-start)
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+```
+npm run start
+# or
+yarn start
+```
 
-### `layouts`
+### `build`
 
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+Build your admin panel. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-build)
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+```
+npm run build
+# or
+yarn build
+```
 
-### `pages`
+## ⚙️ Deployment
 
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
+## 📚 Learn more
 
-### `plugins`
+- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
+- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
+- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
+- [Strapi blog](https://docs.strapi.io) - Official Strapi blog containing articles made by the Strapi team and the community.
+- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
 
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
+Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
+## ✨ Community
 
-### `static`
+- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
+- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
+- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
 
-This directory contains your static files. Each file inside this directory is mapped to `/`.
+---
 
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
+<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
 
-### `store`
+# Nuxt Readme
+## Nuxt 3 Minimal Starter
 
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
+Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+## Setup
+
+Make sure to install the dependencies:
+
+```bash
+# yarn
+yarn install
+
+# npm
+npm install
+
+# pnpm
+pnpm install --shamefully-hoist
+```
+
+## Development Server
+
+Start the development server on http://localhost:3000
+
+```bash
+npm run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+npm run build
+```
+
+Locally preview production build:
+
+```bash
+npm run preview
+```
+
+Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
