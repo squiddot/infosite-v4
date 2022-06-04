@@ -13,7 +13,7 @@ Other Links:
 ## Table of Contents
 - [Introduction](#introduction)
 - [Technologies](#technologies)
-- [Build Setup](#build-setup)
+- [Build Setup](#frontend-setup)
 
 [//]: # (- [Status]&#40;#status&#41;)
 
