@@ -2,13 +2,18 @@
   <div class="container">
     <div class="card" v-for="card in cards" :key="card.id"></div>
   </div>
+  <ScrollGrid></ScrollGrid>
   <NuxtWelcome></NuxtWelcome>
 </template>
 
 <script>
 import gsap from 'gsap'
+import ScrollGrid from "@/components/animations/ScrollGrid";
 
 export default {
+  components: {
+    ScrollGrid
+  },
   data() {
     return { cards: [1, 2, 3, 4, 5, 6] }
   },
